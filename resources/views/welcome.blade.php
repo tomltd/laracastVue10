@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="container">
-            <tasks list="{{ $tasks }}"></tasks>
+            <tasks></tasks>
         </div>
 
         <template id="tasks-template">
