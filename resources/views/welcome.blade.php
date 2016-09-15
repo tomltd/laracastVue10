@@ -22,6 +22,7 @@
             </ul>
         </template>
 
+        <script src="http://code.jquery.com/jquery.js"></script>
         <script src="https://vuejs.org/js/vue.js"></script>
         <script src="/js/main.js"></script>
 
