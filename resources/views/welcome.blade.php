@@ -9,13 +9,21 @@
     </head>
     <body>
         <div class="container">
-            <h1>My Tasks</h1>
-            <ul class="list-group">
-                @foreach ($tasks as $task)
-                    <li class="list-group-item">
-                        {{ $task->body }}
-                    </li>
-                @endforeach
+            <tasks list="{{ $tasks }}"></tasks>
         </div>
+
+        <template id="tasks-template">
+            <h1>My Tasks</h1>
+
+            <ul class="list-group">
+                    <li class="list-group-item" v-for="task in list">
+                        @{{ task.body }}
+                    </li>
+            </ul>
+        </template>
+
+        <script src="https://vuejs.org/js/vue.js"></script>
+        <script src="/js/main.js"></script>
+
     </body>
 </html>
