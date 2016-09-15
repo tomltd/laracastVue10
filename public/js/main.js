@@ -11,6 +11,12 @@ Vue.component('tasks', {
         $.getJSON('api/tasks', function(tasks) {
             this.list = tasks;
         }.bind(this));
+    },
+
+    methods: {
+        delete: function(task) {
+            this.list.$remove(task);
+        }
     }
 
 

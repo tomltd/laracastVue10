@@ -18,6 +18,7 @@
             <ul class="list-group">
                     <li class="list-group-item" v-for="task in list">
                         @{{ task.body }}
+                        <strong @click="delete(task)">X</strong>
                     </li>
             </ul>
         </template>
