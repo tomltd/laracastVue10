@@ -12,20 +12,12 @@ Vue.component('tasks', {
     },
 
     methods: {
-        fetchTaskList: function(){
-
-
-          // GET /someUrl
-          this.$http.get('api/tasks').then((response) => {
-            // success callback
-            console.log(response);
-        }, (response) => {
-            // error callback
-          });
-
-            // $.getJSON('api/tasks', function(tasks) {
-            //     this.list = tasks;
-            // }.bind(this));
+        fetchTaskList() {
+            this.$http.get('api/tasks').then((response) => {
+            this.list = response.body;
+            }, (response) => {
+                console.log('Error fetching tasks');
+            });
         },
 
         deleteTask: function(task) {
