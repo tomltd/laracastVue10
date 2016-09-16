@@ -13,8 +13,16 @@ Vue.component('tasks', {
 
     methods: {
         fetchTaskList() {
-            this.$http.get('api/tasks').then((response) => {
+            var resource = this.$resource('api/tasks/{id}');
+
+
+
+
+
+
+            resource.get().then((response) => {
             this.list = response.body;
+            console.log(response.body);
             }, (response) => {
                 console.log('Error fetching tasks');
             });
