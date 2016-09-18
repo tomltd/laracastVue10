@@ -9,9 +9,9 @@
     </head>
     <body>
 
-        <message></message>
+        <message @new-message="handleNewMessage"></message>
 
-        <template id="tasks-template">
+        <!-- <template id="tasks-template">
             <h1>My Tasks</h1>
 
             <ul class="list-group">
@@ -20,7 +20,7 @@
                         <strong @click="deleteTask(task)">X</strong>
                     </li>
             </ul>
-        </template>
+        </template> -->
 
         <script src="https://vuejs.org/js/vue.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.0.2/vue-resource.js"></script>

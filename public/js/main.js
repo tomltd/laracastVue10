@@ -63,10 +63,16 @@ Vue.component('message', {
 new Vue({
     el: 'body',
 
-    events: {
-        // Recieve the message from the component
-        'new-message': function(message) {
-            console.log('parent is handling message ' + message);
+    data: {
+        messages: [],
+    },
+
+    methods: {
+        handleNewMessage: function(message) {
+            console.log('Parent recieves new message ' + message);
+            this.messages.push(message);
         }
+
     }
+
 });
