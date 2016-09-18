@@ -38,18 +38,26 @@ Vue.filter('role', function(value, role) {
     });
 });
 
+Vue.component('message', {
+
+    template: '<input v-model="message" @keyup.enter="storeMessage"></input>',
+
+    data: function () {
+      return { message: '' }
+  },
+
+    methods: {
+            storeMessage : function() {
+            console.log('storing ' + this.message);
+
+            // Clear out the input.
+            this.message = '';
+        }
+    }
+});
+
 
 new Vue({
     el: 'body',
-
-    data: {
-        people: [
-            { name: 'Tom', role: 'Admin' },
-            { name: 'Morris', role: 'Student' },
-            { name: 'Kitty', role: 'Admin' },
-            { name: 'Liz', role: 'Student' }
-
-        ]
-    }
 
 });

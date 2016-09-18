@@ -9,14 +9,7 @@
     </head>
     <body>
 
-
-        <ul>
-            <li v-for="person in people | role 'Student'">@{{ person.name }}</li>
-        </ul>
-
-        <div class="container">
-            <tasks></tasks>
-        </div>
+        <message></message>
 
         <template id="tasks-template">
             <h1>My Tasks</h1>
