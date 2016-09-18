@@ -32,8 +32,24 @@ Vue.component('tasks', {
 
 });
 
+Vue.filter('role', function(value, role) {
+    return value.filter(function(item) {
+        return item.role == role;
+    });
+});
+
 
 new Vue({
-    el: 'body'
+    el: 'body',
+
+    data: {
+        people: [
+            { name: 'Tom', role: 'Admin' },
+            { name: 'Morris', role: 'Student' },
+            { name: 'Kitty', role: 'Admin' },
+            { name: 'Liz', role: 'Student' }
+
+        ]
+    }
 
 });

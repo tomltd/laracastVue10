@@ -8,6 +8,12 @@
 
     </head>
     <body>
+
+
+        <ul>
+            <li v-for="person in people | role 'Admin'">@{{ person.name }}</li>
+        </ul>
+
         <div class="container">
             <tasks></tasks>
         </div>
