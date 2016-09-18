@@ -50,6 +50,9 @@ Vue.component('message', {
             storeMessage : function() {
             console.log('storing ' + this.message);
 
+            // Send the message up to the parent component
+            this.$dispatch('new-message', this.message);
+
             // Clear out the input.
             this.message = '';
         }
@@ -60,4 +63,10 @@ Vue.component('message', {
 new Vue({
     el: 'body',
 
+    events: {
+        // Recieve the message from the component
+        'new-message': function(message) {
+            console.log('parent is handling message ' + message);
+        }
+    }
 });
