@@ -11,7 +11,7 @@
 
 
         <ul>
-            <li v-for="person in people | role 'Admin'">@{{ person.name }}</li>
+            <li v-for="person in people | role 'Student'">@{{ person.name }}</li>
         </ul>
 
         <div class="container">
