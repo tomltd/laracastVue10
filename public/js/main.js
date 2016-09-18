@@ -16,7 +16,7 @@ Vue.component('tasks', {
             var resource = this.$resource('api/tasks/{id}');
 
 
-            resource.save({id:5}, {body: 'Hello'}).then((response) => {
+            resource.get().then((response) => {
             this.list = response.body;
             console.log(response.body);
             }, (response) => {
