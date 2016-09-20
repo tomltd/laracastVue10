@@ -1,9 +1,16 @@
 
 var store = {
-    username: 'TomFreestone',
-    first: 'Tom',
-    last: 'Freestone'
-}
+
+    state: {
+        username: 'TomFreestone',
+        first: 'Tom',
+        last: 'Freestone'
+    },
+
+    updateUsername: function(username) {
+        this.state.username = username;
+    }
+};
 
 
 new Vue({
@@ -14,14 +21,14 @@ new Vue({
         misc: 'some data',
 
         // our store or shared data
-        shared: store
+        shared: store.state
     },
 
     components: {
         notification: {
 
             data: function() {
-                    return store;
+                    return store.state;
             },
 
             template: '<h2><slot></slot>{{ username }}</h2>'
