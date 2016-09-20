@@ -9,7 +9,9 @@
     </head>
     <body>
 
-        <message @new-message="handleNewMessage"></message>
+        <notification>This is a notification: </notification>
+
+        <!-- <message @new-message="handleNewMessage"></message> -->
 
         <!-- <template id="tasks-template">
             <h1>My Tasks</h1>
