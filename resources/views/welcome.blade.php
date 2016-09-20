@@ -9,6 +9,8 @@
     </head>
     <body>
 
+        <h1>Welcome back - @{{ shared.username }}</h1>
+
         <notification>This is a notification: </notification>
 
         <!-- <message @new-message="handleNewMessage"></message> -->
